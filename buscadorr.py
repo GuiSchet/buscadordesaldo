@@ -8,4 +8,8 @@ while True:
   random_wallet = wallet.create_wallet(network="BTC", seed=seed, children=1)
   resp = requests.get('https://blockchain.info/balance?active=' + random_wallet['address'])
   minerstat = resp.json()
-  print(minerstat,'      ',random_wallet)
+  for item in minerstat:
+    if item['final_balance'] > 0:
+      print(minerstat)
+      print(random_wallet)
+    
