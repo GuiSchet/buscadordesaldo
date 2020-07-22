@@ -8,7 +8,7 @@ while True:
   resp = requests.get('https://blockchain.info/balance?active=' + random_wallet['address'])
   minerstat = resp.json()
   for item in minerstat:
-    if item['final_balance'] > 0:
+    if minerstat[item]['final_balance'] > 0:
+      print('SUCCESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS')
       print(minerstat)
       print(random_wallet)
-    
