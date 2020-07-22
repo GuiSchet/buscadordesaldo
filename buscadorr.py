@@ -1,3 +1,4 @@
+!pip install pywallet
 from pywallet import wallet
 import time
 import requests
